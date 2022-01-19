@@ -13,15 +13,13 @@ export function AudioPage() {
   const [isLooping, setIsLoop] = useState(false);
 
   const [interval, setTrackInterval] = useState(false);
-  // 1 seoncds = 10 -- > 10 * 10 = 100
-  useEffect(() => {
-    loadAudios();
-  }, []);
+
+  /// Interval hook to move the cursor
   const { start, stop, isActive } = useInterval(
     () => {
       setIsPlaying(true); // Set;
       setTrackTime(currTrackTime + 0.1);
-      setCursorPos((cursorPos) => cursorPos + 5.882352941176471 / 10); /// Check if needed here
+      setCursorPos((cursorPos) => cursorPos + 5.882352941176471 / 10);
 
       if (currTrackTime > 17.1) {
         setIsPlaying(false);
@@ -31,19 +29,26 @@ export function AudioPage() {
         if (isLooping) {
           start();
         }
-      } // Currently only 10 seconds as 100
+      }
     },
     100,
     { autoStart: false }
   );
 
-  // Interval functions
+  // Interval Manipulations
   const moveCursor = () => {
     start();
   };
-  //Updates Interval Time
 
-  //---------------------------------------------------------------------
+  const stopCursor = () => {
+    stop();
+  };
+
+  //----------------------------Audio Load section-----------------------------------------
+  useEffect(() => {
+    loadAudios();
+  }, []);
+
   async function loadAudios() {
     try {
       const audios = await audioService.query();
@@ -53,21 +58,7 @@ export function AudioPage() {
     }
   }
 
-  const stopCursor = () => {
-    console.log('stopCursor', interval);
-    stop();
-  };
-
-  const removeAudio = async (audioId) => {
-    try {
-      await audioService.deleteAudio(audioId);
-      loadAudios();
-    } catch (err) {
-      console.log('Could remove audio', err);
-    }
-  };
-
-  //---------------------------------------------------------------------
+  //--------------------------Audio Play section-------------------------------------------
   const togglePlay = () => {
     if (isActive()) {
       stop();
@@ -78,8 +69,6 @@ export function AudioPage() {
       setIsPlaying(true);
       console.log('starting all Audios!!');
     }
-
-    // start();
   };
 
   const onStopPlaying = () => {
@@ -90,8 +79,6 @@ export function AudioPage() {
     setIsPlaying(false);
   };
 
-  ////-----------------------------------
-
   const setMuted = async (id) => {
     let newAudios = audios.map((audio) => {
       if (id === audio._id) {
@@ -101,12 +88,7 @@ export function AudioPage() {
       return audio;
     });
     setAudios(newAudios);
-    console.log('Setting audios, IM HAPPENNING FIRST ?');
   };
-
-  useEffect(() => {
-    console.log('Setting audios, IM HAPPENNING SECOND', audios);
-  }, [audios]);
 
   const setIsLooping = () => {
     setIsLoop((isLooping) => !isLooping);
@@ -116,7 +98,6 @@ export function AudioPage() {
   return (
     <>
       <MainHeader />
-
       <div className="container">
         <Ruler />
 
@@ -125,7 +106,6 @@ export function AudioPage() {
           moveCursor={moveCursor}
           stopCursor={stopCursor}
           setMuted={setMuted}
-          removeAudio={removeAudio}
           audios={audios}
           isPlaying={isPlaying}
           cursorPos={cursorPos}

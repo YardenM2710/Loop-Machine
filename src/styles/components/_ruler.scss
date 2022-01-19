@@ -32,95 +32,180 @@
     content: "0";
    }
     .cm:nth-of-type(2) {
-    left: 10%;
+    left: 5.88%;
    }
     .cm:nth-of-type(2):after {
     content: "1";
    }
     .cm:nth-of-type(3) {
-    left: 20%;
+    left: 11.76%;
    }
     .cm:nth-of-type(3):after {
     content: "2";
    }
     .cm:nth-of-type(4) {
-    left: 30%;
+    left: 17.64%;
    }
     .cm:nth-of-type(4):after {
     content: "3";
    }
     .cm:nth-of-type(5) {
-    left: 40%;
+    left: 23.52%;
    }
     .cm:nth-of-type(5):after {
     content: "4";
    }
     .cm:nth-of-type(6) {
-    left: 50%;
+    left: 29.40%;
    }
     .cm:nth-of-type(6):after {
     content: "5";
    }
     .cm:nth-of-type(7) {
-    left: 60%;
+    left: 35.28%;
    }
     .cm:nth-of-type(7):after {
     content: "6";
    }
     .cm:nth-of-type(8) {
-    left: 70%;
+    left: 41.16%;
    }
     .cm:nth-of-type(8):after {
     content: "7";
    }
     .cm:nth-of-type(9) {
-    left: 80%;
+    left: 47.04%;
    }
     .cm:nth-of-type(9):after {
     content: "8";
    }
     .cm:nth-of-type(10) {
-    left: 90%;
+    left: 52.92%;
    }
     .cm:nth-of-type(10):after {
     content: "9";
    }
     .cm:nth-of-type(11) {
-    left: 100%;
+    left: 58.82%;
    }
     .cm:nth-of-type(11):after {
     content: "10";
    }
+   .cm:nth-of-type(12) {
+    left: 64.7%;
+   }
+   .cm:nth-of-type(12):after {
+    content: "11";
+   }
+   .cm:nth-of-type(13) {
+    left: 70.54%;
+   }
+    .cm:nth-of-type(13):after {
+    content: "12";
+   }
+   .cm:nth-of-type(14) {
+   left: 76.46%;
+  }
+    .cm:nth-of-type(14):after {
+    content: "13";
+   }
+   .cm:nth-of-type(15) {
+   left: 82.42%;
+  }
+  .cm:nth-of-type(15):after {
+    content: "14";
+   }
+   .cm:nth-of-type(16) {
+   left: 88.20%;
+  }
+    .cm:nth-of-type(16):after {
+    content: "15";
+   }
+   .cm:nth-of-type(17) {
+   left: 94.08%;
+  }
+    .cm:nth-of-type(17):after {
+    content: "16";
+   }
+   .cm:nth-of-type(18) {
+   left: 100%;
+  }
+  .cm:nth-of-type(18):after {
+    content: "17";
+   }
+   .cm:last-child{
+     width: 120px;
+   }
+ 
+
     .mm:nth-of-type(1) {
-    left: 10%;
+    left: 5.88%;
+
    }
     .mm:nth-of-type(2) {
-    left: 20%;
+      left: 11.76%;
+
    }
     .mm:nth-of-type(3) {
-    left: 30%;
+      left: 17.64%;
+
    }
     .mm:nth-of-type(4) {
-    left: 40%;
+      left: 23.52%;
+
    }
     .mm:nth-of-type(5) {
-    left: 50%;
+      left: 29.40%;
+
    }
    .mm:nth-of-type(6) {
-    left: 60%;
+    left: 35.28%;
+
    }
     .mm:nth-of-type(7) {
-    left: 70%;
+      left: 41.16%;
+
    }
     .mm:nth-of-type(8) {
-    left: 80%;
+      left: 47.04%;
+
    }
  .mm:nth-of-type(9) {
-    left: 90%;
+  left: 52.8%;
+
+
    }
    .mm:nth-of-type(10) {
-    left: 100%;
+    left:58.6%;
+
    }
+    .mm:nth-of-type(12) {
+      left: 64.64%;
+
+   }
+    .mm:nth-of-type(13) {
+      left: 70.54%;
+
+   }
+    .mm:nth-of-type(14) {
+      left: 76.44%;
+
+   }
+    .mm:nth-of-type(15) {
+      left: 82.42%;
+
+   }
+    .mm:nth-of-type(16) {
+      left: 88.20%;
+   }
+   .mm:nth-of-type(17) {
+    left: 94.08%;
+   }
+   .mm:nth-of-type(18) {
+    left: 100%;
+
+   }
+
   }
 
 

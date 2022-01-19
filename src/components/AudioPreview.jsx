@@ -1,4 +1,4 @@
-import { ToggleButton } from '@mui/material';
+import { Button, ToggleButton } from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 import { VolumeMute, VolumeOff } from '@mui/icons-material';
 
@@ -20,18 +20,23 @@ export function AudioPreview({ audio, currTrackTime, setMuted, isPlaying }) {
       // console.log('Im not playing: ', audio._id);
     } else {
       currAudio.play();
-      console.log('Im playing: ', audio._id);
     }
-  }, [isPlaying]);
-
-  // isAllPlaying ? allAudio.play() : allAudio.pause();
+  }, [isPlaying, audio.isMuted]);
 
   return (
-    <div style={{ backgroundColor: audio.color }} className="audio-preview">
+    <div
+      style={{ backgroundColor: audio.color }}
+      className="audio-preview bounce-in-top"
+    >
       <p>{audio.title}</p>
-      <ToggleButton onClick={togglePlay} value="laptop" aria-label="laptop">
+      <Button
+        onClick={togglePlay}
+        variant="primary"
+        value="laptop"
+        aria-label="laptop"
+      >
         {!audio.isMuted ? <VolumeMute /> : <VolumeOff />}
-      </ToggleButton>
+      </Button>
     </div>
   );
 }

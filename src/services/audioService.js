@@ -104,14 +104,6 @@ let intr = setInterval(() => {
   if (currTrackTime === trackLength) clearInterval(intr);
 }, 100);
 
-// function _getUrl(id = '') {
-//   const BASE_URL =
-//     process.env.NODE_ENV !== 'development'
-//       ? '/api/audio'
-//       : '//localhost:3030/api/audio';
-//   return `${BASE_URL}/${id}`;
-// }
-
 async function query() {
   try {
     const audios = gAudios;

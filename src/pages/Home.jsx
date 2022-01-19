@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { MainHeader } from '../components/MainHeader';
-import { userService } from '../services/userService';
 
 export function Home() {
-  const [user, setUser] = useState(null);
   const history = useHistory();
 
   return (
