@@ -1,0 +1,30 @@
+.audio-list{
+    width: 100%;
+    position: relative;
+    .audio-preview{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        height:50px;
+        padding: 20px;
+        width:100%;
+        margin-top: 20px;
+        background-color: rgba(248, 255, 250, 0.795);
+        cursor: pointer;
+        outline: rgba(255, 255, 255, 0)  1px solid;
+        transition:0.3s;
+        border-radius:10px;
+        
+    }
+    .audio-preview:hover{
+        background-color: rgba(248, 255, 250, 0.685);
+        outline: white  1px solid;
+
+    }
+    p{
+        color: rgb(102, 101, 101);
+        font-family: poppins;
+        font-size: 20px;
+    }
+}

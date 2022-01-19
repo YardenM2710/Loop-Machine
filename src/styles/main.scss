@@ -1,0 +1,21 @@
+// Setup
+@import "setup/variables";
+@import "setup/functions";
+@import "setup/mixins";
+
+// Basics
+@import "basics/typography";
+@import "basics/base";
+@import "basics/helpers";
+@import "basics/layout";
+@import "basics/modals";
+@import "basics/animations";
+
+//components
+@import "components/main-header";
+@import "components/audio-preview";
+@import "components/audio-actions";
+@import "components/ruler";
+@import "components/home-page";
+@import "components/nice-button";
+

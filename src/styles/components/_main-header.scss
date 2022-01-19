@@ -1,0 +1,55 @@
+.app-header {
+    background: #56f08c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+ 
+    box-shadow: 0px -3px 6px 0px;
+
+    button{
+        color: black;
+        cursor: pointer;
+    }
+
+    .nav-bar{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+        width: 200px;
+        height:20vh;
+        background-color: rgba(180, 180, 180, 0.747);
+        top: 0;
+        right: 0;
+        z-index: 1;
+        border-radius: 0px 0px 0px 20px;
+        button{
+        font-size: 1.5em;
+        padding-right: 5px;
+        }
+        transform:translateY(-100%);
+        transition: all 0.3s;
+    }
+
+    .nav-bar.open{
+        transform:translateY(0%)
+
+    }
+
+    .screen{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height:100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.356);
+        z-index: 1;
+    }
+    .invisible{ 
+        display:none;
+    }
+
+}
+
